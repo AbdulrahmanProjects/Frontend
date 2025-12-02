@@ -8,39 +8,39 @@
     <meta name="author" content="HotelReservations">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#6366f1">
-    
-    <!-- Open Graph Meta Tags -->
+
+
     <meta property="og:title" content="HotelReservations - Premium Hotel Booking">
     <meta property="og:description" content="Experience luxury accommodations and exciting activities at the world's finest hotels. Book your dream vacation with ease and confidence.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="">
     <meta property="og:image" content="">
-    
-    <!-- Twitter Card Meta Tags -->
+
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="HotelReservations - Premium Hotel Booking">
     <meta name="twitter:description" content="Experience luxury accommodations and exciting activities at the world's finest hotels.">
-    
+
     <title>HotelReservations - Premium Hotel Booking System</title>
-    
-    <!-- Preload Critical Resources -->
+
+
     <link rel="preload" href="styles.css" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
-    
-    <!-- Stylesheets -->
+
+
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Favicon -->
+
+
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏨</text></svg>">
 </head>
 <body>
-    <!-- Skip Link for Accessibility -->
 
 
 
-    <!-- Navigation -->
+
+
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-logo">
@@ -74,7 +74,7 @@
             </button>
         </div>
     </nav>
-    <!-- Hero Section -->
+
     <main id="main-content">
         <section id="home" class="hero">
             <video id="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
@@ -96,7 +96,7 @@
             </div>
         </section>
 
-    <!-- Hotels Section -->
+
     <section id="hotels" class="hotels">
         <div class="container">
             <div class="section-header">
@@ -104,12 +104,12 @@
                 <p data-en="Discover our handpicked selection of luxury hotels" data-ar="اكتشف مجموعتنا المختارة بعناية من الفنادق الفاخرة ">Discover our handpicked selection of luxury hotels worldwide</p>
             </div>
             <div class="hotels-grid" id="hotelsGrid">
-                <!-- Hotels injected from backend -->
+
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
@@ -144,7 +144,7 @@
         </div>
     </section>
 
-    <!-- Authentication Modal -->
+
     <div id="authModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -181,7 +181,7 @@
         </div>
     </div>
 
-    <!-- Booking Modal -->
+
     <div id="bookingModal" class="modal">
         <div class="modal-content booking-modal">
             <div class="modal-header">
@@ -209,15 +209,15 @@
                 </div>
 
                 <form id="bookingForm">
-                    <!-- Step 1: Hotel Selection -->
+
                     <div class="booking-step" id="step1">
                         <h3 data-en="Select Hotel" data-ar="اختر الفندق">Select Hotel</h3>
                         <div class="hotel-options" id="hotelOptions">
-                            <!-- Hotels injected from backend -->
+
                         </div>
                     </div>
 
-                    <!-- Step 2: Room & Dates -->
+
                     <div class="booking-step" id="step2" style="display: none;">
                         <h3 data-en="Select Room & Dates" data-ar="اختر الغرفة والتواريخ">Select Room & Dates</h3>
                         <div class="room-dates-selection">
@@ -234,21 +234,21 @@
                             <div class="room-selection">
                                 <label data-en="Room Type" data-ar="نوع الغرفة">Room Type</label>
                                 <div class="room-options" id="roomOptions">
-                                    <!-- Rooms injected from backend -->
+
                                 </div>
                             </div>
                             <div class="time-selection">
                                 <label data-en="Preferred Time" data-ar="الوقت المفضل">Preferred Time</label>
                                 <div class="time-slots">
                                     <div id="timeGrid" class="time-grid">
-                                        <!-- Time slots will be generated by JavaScript -->
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Step 3: Details -->
+
                     <div class="booking-step" id="step3" style="display: none;">
                         <h3 data-en="Booking Details" data-ar="تفاصيل الحجز">Booking Details</h3>
                         <div class="form-row">
@@ -271,7 +271,7 @@
                         </div>
                     </div>
 
-                    <!-- Step 4: Confirmation -->
+
                     <div class="booking-step" id="step4" style="display: none;">
                         <h3 data-en="Confirm Your Booking" data-ar="أكد حجزك">Confirm Your Booking</h3>
                         <div class="booking-summary">
@@ -324,7 +324,7 @@
         </div>
     </div>
 
-    <!-- Dashboard Modal -->
+
     <div id="dashboardModal" class="modal">
         <div class="modal-content dashboard-modal">
             <div class="modal-header">
@@ -339,10 +339,10 @@
                     <button class="tab-btn" data-tab="settings" data-en="Settings" data-ar="الإعدادات">Settings</button>
                 </div>
                 <div class="dashboard-content">
-                    <!-- Profile Tab -->
+
                     <div class="tab-content active" id="profileTab">
                         <div class="profile-section">
-                            <!-- Modern Profile Header -->
+
                             <div class="profile-card">
                                 <div class="profile-header">
                                     <div class="profile-avatar" id="profileAvatar">
@@ -365,7 +365,7 @@
                                 </div>
                             </div>
 
-                            <!-- Simple Edit Form -->
+
                             <div class="profile-form-card">
                                 <form id="profileForm">
                                     <div class="form-group">
@@ -395,22 +395,22 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Upcoming Bookings Tab -->
+
+
                     <div class="tab-content" id="upcomingTab">
                         <div class="bookings-list" id="upcomingBookings">
-                            <!-- Upcoming bookings will be populated here -->
+
                         </div>
                     </div>
-                    
-                    <!-- History Tab -->
+
+
                     <div class="tab-content" id="historyTab">
                         <div class="bookings-list" id="historyBookings">
-                            <!-- Booking history will be populated here -->
+
                         </div>
                     </div>
-                    
-                    <!-- Settings Tab -->
+
+
                     <div class="tab-content" id="settingsTab">
                         <div class="settings-section">
                             <h4 data-en="Account Settings" data-ar="إعدادات الحساب">Account Settings</h4>
@@ -443,7 +443,7 @@
                                     </label>
                                 </div>
                             </div>
-                            
+
                             <div class="danger-zone">
                                 <h4 data-en="Danger Zone" data-ar="منطقة الخطر">Danger Zone</h4>
                                 <div class="setting-item">
@@ -461,7 +461,7 @@
         </div>
     </div>
 
-    <!-- Success Notification -->
+
     <div id="successNotification" class="notification">
         <div class="notification-content">
             <i class="fas fa-check-circle"></i>

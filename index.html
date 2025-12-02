@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HotelResr - Premium hotel booking system with luxury accommodations, activities, and seamless booking experience. Book your dream vacation with ease.">
+    <meta name="keywords" content="hotel booking, luxury hotels, vacation booking, travel, accommodation, spa, dining, activities">
+    <meta name="author" content="HotelReservations">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#6366f1">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="HotelReservations - Premium Hotel Booking">
+    <meta property="og:description" content="Experience luxury accommodations and exciting activities at the world's finest hotels. Book your dream vacation with ease and confidence.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HotelReservations - Premium Hotel Booking">
+    <meta name="twitter:description" content="Experience luxury accommodations and exciting activities at the world's finest hotels.">
+    
+    <title>HotelReservations - Premium Hotel Booking System</title>
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏨</text></svg>">
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+
+
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home" class="logo-link" aria-label="HotelReservations home">
+                    <i class="fas fa-hotel" aria-hidden="true"></i>
+                    <span data-en="HotelReservations" data-ar="حجوزات الفنادق">HotelReservations</span>
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu" role="menubar">
+                <a href="#home" class="nav-link" data-en="Home" data-ar="الرئيسية" role="menuitem" aria-label="Go to home section">Home</a>
+                <a href="#hotels" class="nav-link" data-en="Hotels" data-ar="الفنادق" role="menuitem" aria-label="View available hotels">Hotels</a>
+                <a href="#about" class="nav-link" data-en="About" data-ar="حولنا" role="menuitem" aria-label="Learn about HotelReservations">About</a>
+            </div>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode" aria-label="Toggle dark mode" aria-pressed="false">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+                <button class="language-toggle" id="languageToggle" title="Switch Language" aria-label="Switch language" aria-pressed="false">
+                    <i class="fas fa-globe" aria-hidden="true"></i>
+                    <span data-en="EN" data-ar="عربي">EN</span>
+                </button>
+                <div class="nav-auth">
+                    <button class="btn btn-outline" id="signInBtn" data-en="Sign In" data-ar="تسجيل الدخول" aria-label="Sign in to your account">Sign In</button>
+                    <button class="btn btn-primary" id="signUpBtn" data-en="Sign Up" data-ar="إنشاء حساب" aria-label="Create a new account">Sign Up</button>
+                </div>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <main id="main-content">
+        <section id="home" class="hero">
+            <video id="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+                <source src="Hotel_Clips.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-copy">
+                        <span class="hero-kicker" data-en="Discover Your Perfect" data-ar="اكتشف">Discover Your Perfect</span>
+                        <h1 class="hero-headline">
+                            <span class="hero-headline-text" data-en="Hotel Stay" data-ar="إقامة فندقية">Hotel Stay</span>
+                        </h1>
+                        <p class="hero-summary" data-en="Experience luxury accommodations and exciting activities at the world's finest hotels. Book your dream vacation with ease and confidence." data-ar="استمتع بإقامة فاخرة وأنشطة مثيرة في أفضل فنادق العالم. احجز إجازتك المثالية بسهولة وثقة.">
+                            Experience luxury accommodations and exciting activities at the world's finest hotels. Book your dream vacation with ease and confidence.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Hotels Section -->
+    <section id="hotels" class="hotels">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="Hotels Booking" data-ar="الفنادق المميزة">Hotels Booking</h2>
+                <p data-en="Discover our handpicked selection of luxury hotels" data-ar="اكتشف مجموعتنا المختارة بعناية من الفنادق الفاخرة ">Discover our handpicked selection of luxury hotels worldwide</p>
+            </div>
+            <div class="hotels-grid" id="hotelsGrid">
+                <!-- Hotels injected from backend -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="About HotelReservations" data-ar="حول حجوزات الفنادق">About HotelReservations</h2>
+                <p data-en="Your trusted partner for luxury hotel bookings worldwide" data-ar="شريكك الموثوق لحجز الفنادق الفاخرة حول العالم">Your trusted partner for luxury hotel bookings worldwide</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 data-en="Why Choose Us?" data-ar="لماذا تختارنا؟">Why Choose Us?</h3>
+                    <p data-en="We provide exceptional service with access to the world's most prestigious hotels and resorts. Our platform offers seamless booking experiences with exclusive deals and personalized recommendations." data-ar="نوفر خدمة استثنائية مع إمكانية الوصول إلى أكثر الفنادق والمنتجعات الفاخرة في العالم. منصتنا توفر تجارب حجز سلسة مع عروض حصرية وتوصيات شخصية.">
+                        We provide exceptional service with access to the world's most prestigious hotels and resorts. Our platform offers seamless booking experiences with exclusive deals and personalized recommendations.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4 data-en="Secure Booking" data-ar="حجز آمن">Secure Booking</h4>
+                            <p data-en="Your data and payments are protected with bank-level security" data-ar="بياناتك ومدفوعاتك محمية بأمان على مستوى البنوك">Your data and payments are protected with bank-level security</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-headset"></i>
+                            <h4 data-en="24/7 Support" data-ar="دعم على مدار الساعة">24/7 Support</h4>
+                            <p data-en="Round-the-clock customer service for all your needs" data-ar="خدمة عملاء على مدار الساعة لجميع احتياجاتك">Round-the-clock customer service for all your needs</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-star"></i>
+                            <h4 data-en="Premium Quality" data-ar="جودة مميزة">Premium Quality</h4>
+                            <p data-en="Only the finest hotels and resorts in our collection" data-ar="فقط أفضل الفنادق والمنتجعات في مجموعتنا">Only the finest hotels and resorts in our collection</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authentication Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle" data-en="Sign In" data-ar="تسجيل الدخول">Sign In</h2>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="authForm">
+                    <div class="form-group">
+                        <label for="email" data-en="Email" data-ar="البريد الإلكتروني">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="example@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" data-en="Password" data-ar="كلمة المرور">Password</label>
+                        <input type="password" id="password" name="password" required placeholder="••••••••">
+                    </div>
+                    <div class="form-group" id="confirmPasswordGroup" style="display: none;">
+                        <label for="confirmPassword" data-en="Confirm Password" data-ar="تأكيد كلمة المرور">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="••••••••">
+                    </div>
+                    <div class="form-group" id="nameGroup" style="display: none;">
+                        <label for="fullName" data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Full Name">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span id="submitText" data-en="Sign In" data-ar="تسجيل الدخول">Sign In</span>
+                    </button>
+                </form>
+                <div class="auth-switch">
+                    <p id="switchText" data-en="Don't have an account?" data-ar="ليس لديك حساب؟">Don't have an account?</p>
+                    <button id="switchMode" class="link-btn" data-en="Sign Up" data-ar="إنشاء حساب">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content booking-modal">
+            <div class="modal-header">
+                <h2 data-en="Book Your Hotel Stay" data-ar="احجز إقامتك الفندقية">Book Your Hotel Stay</h2>
+                <button class="close-btn" id="closeBookingModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="booking-steps">
+                    <div class="step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-label" data-en="Hotel" data-ar="الفندق">Hotel</div>
+                    </div>
+                    <div class="step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-label" data-en="Room & Dates" data-ar="الغرفة والتواريخ">Room & Dates</div>
+                    </div>
+                    <div class="step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-label" data-en="Details" data-ar="التفاصيل">Details</div>
+                    </div>
+                    <div class="step" data-step="4">
+                        <div class="step-number">4</div>
+                        <div class="step-label" data-en="Confirm" data-ar="تأكيد">Confirm</div>
+                    </div>
+                </div>
+
+                <form id="bookingForm">
+                    <!-- Step 1: Hotel Selection -->
+                    <div class="booking-step" id="step1">
+                        <h3 data-en="Select Hotel" data-ar="اختر الفندق">Select Hotel</h3>
+                        <div class="hotel-options" id="hotelOptions">
+                            <!-- Hotels injected from backend -->
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Room & Dates -->
+                    <div class="booking-step" id="step2" style="display: none;">
+                        <h3 data-en="Select Room & Dates" data-ar="اختر الغرفة والتواريخ">Select Room & Dates</h3>
+                        <div class="room-dates-selection">
+                            <div class="date-range">
+                                <div class="form-group">
+                                    <label for="checkInDate" data-en="Check-in Date" data-ar="تاريخ الوصول">Check-in Date</label>
+                                    <input type="date" id="checkInDate" name="checkInDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="checkOutDate" data-en="Check-out Date" data-ar="تاريخ المغادرة">Check-out Date</label>
+                                    <input type="date" id="checkOutDate" name="checkOutDate" required>
+                                </div>
+                            </div>
+                            <div class="room-selection">
+                                <label data-en="Room Type" data-ar="نوع الغرفة">Room Type</label>
+                                <div class="room-options" id="roomOptions">
+                                    <!-- Rooms injected from backend -->
+                                </div>
+                            </div>
+                            <div class="time-selection">
+                                <label data-en="Preferred Time" data-ar="الوقت المفضل">Preferred Time</label>
+                                <div class="time-slots">
+                                    <div id="timeGrid" class="time-grid">
+                                        <!-- Time slots will be generated by JavaScript -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Details -->
+                    <div class="booking-step" id="step3" style="display: none;">
+                        <h3 data-en="Booking Details" data-ar="تفاصيل الحجز">Booking Details</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bookingName" data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
+                                <input type="text" id="bookingName" name="bookingName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bookingPhone" data-en="Phone Number" data-ar="رقم الهاتف">Phone Number</label>
+                                <input type="tel" id="bookingPhone" name="bookingPhone" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="bookingEmail" data-en="Email" data-ar="البريد الإلكتروني">Email</label>
+                            <input type="email" id="bookingEmail" name="bookingEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bookingNotes" data-en="Special Requests (Optional)" data-ar="طلبات خاصة (اختياري)">Special Requests (Optional)</label>
+                            <textarea id="bookingNotes" name="bookingNotes" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Confirmation -->
+                    <div class="booking-step" id="step4" style="display: none;">
+                        <h3 data-en="Confirm Your Booking" data-ar="أكد حجزك">Confirm Your Booking</h3>
+                        <div class="booking-summary">
+                            <div class="summary-item">
+                                <span data-en="Hotel:" data-ar="الفندق:">Hotel:</span>
+                                <span id="summaryHotel">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span data-en="Room Type:" data-ar="نوع الغرفة:">Room Type:</span>
+                                <span id="summaryRoom">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span data-en="Check-in:" data-ar="تاريخ الوصول:">Check-in:</span>
+                                <span id="summaryCheckIn">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span data-en="Check-out:" data-ar="تاريخ المغادرة:">Check-out:</span>
+                                <span id="summaryCheckOut">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span data-en="Nights:" data-ar="عدد الليالي:">Nights:</span>
+                                <span id="summaryNights">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span data-en="Name:" data-ar="الاسم:">Name:</span>
+                                <span id="summaryName">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span data-en="Phone:" data-ar="الهاتف:">Phone:</span>
+                                <span id="summaryPhone">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span data-en="Email:" data-ar="البريد الإلكتروني:">Email:</span>
+                                <span id="summaryEmail">-</span>
+                            </div>
+                            <div class="summary-item total">
+                                <span data-en="Total:" data-ar="المجموع:">Total:</span>
+                                <span id="summaryTotal">$0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="booking-navigation">
+                        <button type="button" class="btn btn-outline" id="prevStep" style="display: none;" data-en="Previous" data-ar="السابق">Previous</button>
+                        <button type="button" class="btn btn-primary" id="nextStep" data-en="Next" data-ar="التالي">Next</button>
+                        <button type="submit" class="btn btn-primary" id="confirmBooking" style="display: none;" data-en="Confirm Booking" data-ar="أكد الحجز">Confirm Booking</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Modal -->
+    <div id="dashboardModal" class="modal">
+        <div class="modal-content dashboard-modal">
+            <div class="modal-header">
+                <h2 data-en="My Dashboard" data-ar="لوحة التحكم">My Dashboard</h2>
+                <button class="close-btn" id="closeDashboardModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="dashboard-tabs">
+                    <button class="tab-btn active" data-tab="profile" data-en="Profile" data-ar="الملف الشخصي">Profile</button>
+                    <button class="tab-btn" data-tab="upcoming" data-en="Upcoming" data-ar="القادمة">Upcoming</button>
+                    <button class="tab-btn" data-tab="history" data-en="History" data-ar="السابقة">History</button>
+                    <button class="tab-btn" data-tab="settings" data-en="Settings" data-ar="الإعدادات">Settings</button>
+                </div>
+                <div class="dashboard-content">
+                    <!-- Profile Tab -->
+                    <div class="tab-content active" id="profileTab">
+                        <div class="profile-section">
+                            <!-- Modern Profile Header -->
+                            <div class="profile-card">
+                                <div class="profile-header">
+                                    <div class="profile-avatar" id="profileAvatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="profile-header-info">
+                                        <h2 id="profileName">Demo User</h2>
+                                        <p id="profileEmail">demo@example.com</p>
+                                    </div>
+                                </div>
+                                <div class="profile-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-value" id="totalBookings">0</span>
+                                        <span class="stat-name" data-en="Bookings" data-ar="الحجوزات">Bookings</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-value" id="totalSpent">$0</span>
+                                        <span class="stat-name" data-en="Spent" data-ar="المصروف">Spent</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Simple Edit Form -->
+                            <div class="profile-form-card">
+                                <form id="profileForm">
+                                    <div class="form-group">
+                                        <label for="profileFullName" data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
+                                        <input type="text" id="profileFullName" name="fullName" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="profileEmailField" data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</label>
+                                        <input type="email" id="profileEmailField" name="email" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="profilePhone" data-en="Phone Number" data-ar="رقم الهاتف">Phone Number</label>
+                                        <input type="tel" id="profilePhone" name="phone">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="profileBio" data-en="Bio" data-ar="نبذة شخصية">Bio</label>
+                                        <textarea id="profileBio" name="bio" rows="3" placeholder="Tell us about yourself..."></textarea>
+                                    </div>
+
+                                    <div class="form-actions">
+                                        <button type="submit" class="btn btn-primary" data-en="Save Changes" data-ar="حفظ التغييرات">Save Changes</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Upcoming Bookings Tab -->
+                    <div class="tab-content" id="upcomingTab">
+                        <div class="bookings-list" id="upcomingBookings">
+                            <!-- Upcoming bookings will be populated here -->
+                        </div>
+                    </div>
+                    
+                    <!-- History Tab -->
+                    <div class="tab-content" id="historyTab">
+                        <div class="bookings-list" id="historyBookings">
+                            <!-- Booking history will be populated here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Settings Tab -->
+                    <div class="tab-content" id="settingsTab">
+                        <div class="settings-section">
+                            <h4 data-en="Account Settings" data-ar="إعدادات الحساب">Account Settings</h4>
+                            <div class="settings-group">
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h5 data-en="Change Password" data-ar="تغيير كلمة المرور">Change Password</h5>
+                                        <p data-en="Update your account password" data-ar="تحديث كلمة مرور حسابك">Update your account password</p>
+                                    </div>
+                                    <button class="btn btn-outline" id="changePasswordBtn" data-en="Change" data-ar="تغيير">Change</button>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h5 data-en="Email Notifications" data-ar="إشعارات البريد الإلكتروني">Email Notifications</h5>
+                                        <p data-en="Manage your email notification preferences" data-ar="إدارة تفضيلات إشعارات البريد الإلكتروني">Manage your email notification preferences</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="emailNotifications" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h5 data-en="SMS Notifications" data-ar="إشعارات الرسائل النصية">SMS Notifications</h5>
+                                        <p data-en="Receive SMS updates about your bookings" data-ar="تلقي تحديثات الرسائل النصية حول حجوزاتك">Receive SMS updates about your bookings</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="smsNotifications">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="danger-zone">
+                                <h4 data-en="Danger Zone" data-ar="منطقة الخطر">Danger Zone</h4>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h5 data-en="Delete Account" data-ar="حذف الحساب">Delete Account</h5>
+                                        <p data-en="Permanently delete your account and all data" data-ar="حذف حسابك وجميع البيانات نهائياً">Permanently delete your account and all data</p>
+                                    </div>
+                                    <button class="btn btn-danger" id="deleteAccountBtn" data-en="Delete Account" data-ar="حذف الحساب">Delete Account</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Notification -->
+    <div id="successNotification" class="notification">
+        <div class="notification-content">
+            <i class="fas fa-check-circle"></i>
+            <span>Booking confirmed successfully!</span>
+        </div>
+    </div>
+
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>

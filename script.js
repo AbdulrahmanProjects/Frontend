@@ -5,7 +5,7 @@ class HotelBookingSystem {
         this.currentStep = 1;
         this.currentLanguage = 'en';
         this.currentTheme = localStorage.getItem('theme') || 'light';
-        this.apiBase = 'http://localhost:3001';
+        this.apiBase = 'https://backend1-rxwn.onrender.com';
         this.validationMessages = {};
         this.bookingData = {
             hotelId: null,
